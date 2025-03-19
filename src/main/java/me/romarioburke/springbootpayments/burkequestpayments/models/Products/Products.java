@@ -1,4 +1,4 @@
-package me.romarioburke.models.Products;
+package me.romarioburke.springbootpayments.burkequestpayments.models.Products;
 
 
 import jakarta.persistence.*;
@@ -14,7 +14,8 @@ public class Products {
     private Long productID;
     private String name;
     private Double price;
-
+    @Column(nullable = true)
+    private String description;
     //Ensures that a product can only have 1 icon
     @OneToOne(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
     private ProductIcon productIcon;
@@ -22,9 +23,9 @@ public class Products {
     //Ensures that an Icon can have multiple tags for filtering
     @ManyToMany
     @JoinTable(
-            name = "Product_Tags",
-            joinColumns = @JoinColumn(name = "product_id"),
+            name = "product_tags",
+            joinColumns = @JoinColumn(name = "product_ProductID"),
             inverseJoinColumns = @JoinColumn(name = "tag_id")
     )
-    private Set<ProductTags> tags = new HashSet<>();
+    private Set<Tag> tags = new HashSet<>();
 }
