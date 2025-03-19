@@ -1,14 +1,14 @@
-package me.romarioburke.models;
+package me.romarioburke.springbootpayments.burkequestpayments.models;
 
 import jakarta.persistence.*;
 import lombok.*;
-import me.romarioburke.models.Orders.Order;
+import me.romarioburke.springbootpayments.burkequestpayments.models.Orders.Order;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "Orders")
+@Table(name = "Users")
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor
 public class User {
     @Id
