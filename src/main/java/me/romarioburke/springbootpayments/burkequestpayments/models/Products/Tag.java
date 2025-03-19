@@ -1,4 +1,4 @@
-package me.romarioburke.models.Products;
+package me.romarioburke.springbootpayments.burkequestpayments.models.Products;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -6,12 +6,12 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "ProductTags")
+@Table(name = "Tag")
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor
-public class ProductTags {
+public class Tag{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long tagID;
+    private Long id;
 
     @Column(unique = true, nullable = false)
     private String name;
