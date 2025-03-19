@@ -1,10 +1,12 @@
-package me.romarioburke.models.Orders;
+package me.romarioburke.springbootpayments.burkequestpayments.models.Orders;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import me.romarioburke.springbootpayments.burkequestpayments.models.User;
+
 import java.util.List;
 import java.time.LocalDate;
 
@@ -16,8 +18,9 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long orderID;
 
-    @Column(nullable = false)
-    private Long userID; // Foreign key linking to User
+    @ManyToOne
+    @JoinColumn(name = "userID", nullable = false)
+    private User user;
 
     @Column(nullable = false)
     private String currentStatus;
