@@ -1,4 +1,4 @@
-package me.romarioburke.configurations;
+package me.romarioburke.springbootpayments.burkequestpayments.configurations;
 
 import org.springdoc.core.models.GroupedOpenApi;
 import org.springframework.context.annotation.Bean;
