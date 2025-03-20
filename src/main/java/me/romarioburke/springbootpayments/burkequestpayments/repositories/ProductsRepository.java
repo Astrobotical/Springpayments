@@ -1,6 +1,6 @@
-package me.romarioburke.repositories;
+package me.romarioburke.springbootpayments.burkequestpayments.repositories;
 
-import me.romarioburke.models.Products.Products;
+import me.romarioburke.springbootpayments.burkequestpayments.models.Products.Products;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
