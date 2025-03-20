@@ -1,4 +1,4 @@
-package me.romarioburke.models.Products;
+package me.romarioburke.springbootpayments.burkequestpayments.models.Products;
 
 
 import jakarta.persistence.*;
