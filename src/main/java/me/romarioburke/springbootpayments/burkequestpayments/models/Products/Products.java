@@ -12,8 +12,11 @@ public class Products {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long productID;
+    @Column(nullable = false)
     private String name;
+    @Column(nullable = false)
     private Double price;
+
     @Column(nullable = true)
     private String description;
     //Ensures that a product can only have 1 icon
