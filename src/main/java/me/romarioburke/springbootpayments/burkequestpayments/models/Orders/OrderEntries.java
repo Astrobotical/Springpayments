@@ -15,6 +15,7 @@ public class OrderEntries {
     @OneToOne
     @JoinColumn(name = "product_id", referencedColumnName = "ProductID", nullable = false)
     private Products product;
+
     @ManyToOne
     @JoinColumn(name = "order_orderID", nullable = false)
     private Order order;
